@@ -121,10 +121,10 @@ int main( )
 
         // Set initial Kepler elements for Delfi.
         Eigen::Vector6d initialKeplerElements;
-        initialKeplerElements[ semiMajorAxisIndex ] = 1900.0E3;
-        initialKeplerElements[ eccentricityIndex ] = 0.05;
+        initialKeplerElements[ semiMajorAxisIndex ] = 6378.0E3 + 550.0E3;
+        initialKeplerElements[ eccentricityIndex ] = 0.05; // NOTE: This value is larger than for the real satellite
         initialKeplerElements[ inclinationIndex ] =
-                89.7 * mathematical_constants::PI / 180.0;
+                97.55 * mathematical_constants::PI / 180.0;
 
         ///                                                           ///
         ///  MODIFY INITIAL STATE ACCORDING TO STUDENT NUMBER         ///
